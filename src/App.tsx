@@ -28,7 +28,7 @@ const portfolioData = {
   brandIdentity: [
     {
       title: "Black and White Science Class Logo",
-      image: "/portfolio/Black and White Simple Vintage Grunge Science Class Logo.png",
+      image: "/graphic_design_portfolio/portfolio/Black and White Simple Vintage Grunge Science Class Logo.png",
       category: "Logo Design",
       description: "A vintage-inspired educational brand identity combining scientific precision with classic aesthetics.",
       tools: ["Adobe Illustrator", "Adobe Photoshop"],
@@ -36,7 +36,7 @@ const portfolioData = {
     },
     {
       title: "Tunisia Shop Branding",
-      image: "/portfolio/Tunisiashop.png",
+      image: "/graphic_design_portfolio/portfolio/Tunisiashop.png",
       category: "Brand Identity",
       description: "Complete brand identity for an authentic Tunisian marketplace, featuring traditional motifs with modern appeal.",
       tools: ["Adobe Illustrator", "Adobe Photoshop"],
@@ -44,7 +44,7 @@ const portfolioData = {
     },
     {
       title: "Modern P Monogram",
-      image: "/portfolio/P.png",
+      image: "/graphic_design_portfolio/portfolio/P.png",
       category: "Logo Design",
       description: "Minimalist and sophisticated monogram design showcasing modern typography and geometric precision.",
       tools: ["Adobe Illustrator"],
@@ -54,7 +54,7 @@ const portfolioData = {
   marketing: [
     {
       title: "Night Club DJ Flyer",
-      image: "/portfolio/Black Party Night Club Dj Flyer.png",
+      image: "/graphic_design_portfolio/portfolio/Black Party Night Club Dj Flyer.png",
       category: "Event Marketing",
       description: "Dynamic and energetic flyer design for nightlife events, capturing the essence of modern club culture.",
       tools: ["Adobe Photoshop", "Adobe Illustrator"],
@@ -62,7 +62,7 @@ const portfolioData = {
     },
     {
       title: "Tunisian Music Festival Poster",
-      image: "/portfolio/tunisian-music-poster.png",
+      image: "/graphic_design_portfolio/portfolio/tunisian-music-poster.png",
       category: "Event Marketing",
       description: "Cultural event poster blending traditional Tunisian elements with contemporary design principles.",
       tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"],
@@ -70,7 +70,7 @@ const portfolioData = {
     },
     {
       title: "Yasmine Music Club Poster",
-      image: "/portfolio/yasmine-music-club-poster.png",
+      image: "/graphic_design_portfolio/portfolio/yasmine-music-club-poster.png",
       category: "Event Marketing",
       description: "Vibrant poster design for a music venue, emphasizing atmosphere and entertainment.",
       tools: ["Adobe Photoshop", "Adobe Illustrator"],
@@ -78,7 +78,7 @@ const portfolioData = {
     },
     {
       title: "Creative Design Exhibition",
-      image: "/portfolio/Untitled design.png",
+      image: "/graphic_design_portfolio/portfolio/Untitled design.png",
       category: "Event Marketing",
       description: "Contemporary poster design for an art exhibition, featuring dynamic composition and modern typography.",
       tools: ["Adobe InDesign", "Adobe Photoshop"],
@@ -88,7 +88,7 @@ const portfolioData = {
   foodAndBeverage: [
     {
       title: "Tunisia Food Campaign",
-      image: "/portfolio/Tunisa Food.png",
+      image: "/graphic_design_portfolio/portfolio/Tunisa Food.png",
       category: "Food & Beverage",
       description: "Mouth-watering food photography and design layout showcasing Tunisian cuisine.",
       tools: ["Adobe Photoshop", "Adobe InDesign", "Adobe Lightroom"],
@@ -96,7 +96,7 @@ const portfolioData = {
     },
     {
       title: "Culinary Art Direction",
-      image: "/portfolio/Untitled design (1).png",
+      image: "/graphic_design_portfolio/portfolio/Untitled design (1).png",
       category: "Food & Beverage",
       description: "Art direction and styling for a high-end restaurant menu and marketing materials.",
       tools: ["Adobe Photoshop", "Adobe InDesign", "Adobe Lightroom"],
@@ -106,7 +106,7 @@ const portfolioData = {
   photography: [
     {
       title: "Camping Photo Collage",
-      image: "/portfolio/Beige Parchment Background Camping Photo Collage.png",
+      image: "/graphic_design_portfolio/portfolio/Beige Parchment Background Camping Photo Collage.png",
       category: "Photography & Layout",
       description: "Artistic photo collage capturing outdoor adventures with a vintage aesthetic.",
       tools: ["Adobe Photoshop", "Adobe Lightroom"],
@@ -116,7 +116,7 @@ const portfolioData = {
   digitalDesign: [
     {
       title: "E-commerce Website Design",
-      image: "/portfolio/Tunisiashop.png",
+      image: "/graphic_design_portfolio/portfolio/Tunisiashop.png",
       category: "UI/UX Design",
       description: "Modern e-commerce platform design featuring intuitive navigation and engaging visuals.",
       tools: ["Adobe XD", "Adobe Photoshop", "Figma"],
@@ -124,7 +124,7 @@ const portfolioData = {
     },
     {
       title: "Mobile App Interface",
-      image: "/portfolio/Untitled design.png",
+      image: "/graphic_design_portfolio/portfolio/Untitled design.png",
       category: "UI/UX Design",
       description: "Clean and intuitive mobile application interface design with focus on user experience.",
       tools: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
@@ -134,7 +134,7 @@ const portfolioData = {
   socialMedia: [
     {
       title: "Instagram Content Strategy",
-      image: "/portfolio/Untitled design (1).png",
+      image: "/graphic_design_portfolio/portfolio/Untitled design (1).png",
       category: "Social Media",
       description: "Cohesive social media design package including story templates, post designs, and highlights covers.",
       tools: ["Adobe Photoshop", "Adobe Illustrator", "Canva"],
