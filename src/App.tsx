@@ -36,7 +36,7 @@ const portfolioData = {
     },
     {
       title: "Tunisia Shop Branding",
-      image: "/graphic_design_portfolio/portfolio/Tunisiashop.png",
+      image: "./portfolio/Tunisiashop.png",
       category: "Brand Identity",
       description: "Complete brand identity for an authentic Tunisian marketplace, featuring traditional motifs with modern appeal.",
       tools: ["Adobe Illustrator", "Adobe Photoshop"],
@@ -44,7 +44,7 @@ const portfolioData = {
     },
     {
       title: "Modern P Monogram",
-      image: "/graphic_design_portfolio/portfolio/P.png",
+      image: "./portfolio/P.png",
       category: "Logo Design",
       description: "Minimalist and sophisticated monogram design showcasing modern typography and geometric precision.",
       tools: ["Adobe Illustrator"],
@@ -54,7 +54,7 @@ const portfolioData = {
   marketing: [
     {
       title: "Night Club DJ Flyer",
-      image: "/graphic_design_portfolio/portfolio/Black Party Night Club Dj Flyer.png",
+      image: "./portfolio/Black Party Night Club Dj Flyer.png",
       category: "Event Marketing",
       description: "Dynamic and energetic flyer design for nightlife events, capturing the essence of modern club culture.",
       tools: ["Adobe Photoshop", "Adobe Illustrator"],
@@ -62,7 +62,7 @@ const portfolioData = {
     },
     {
       title: "Tunisian Music Festival Poster",
-      image: "/graphic_design_portfolio/portfolio/tunisian-music-poster.png",
+      image: "./portfolio/tunisian-music-poster.png",
       category: "Event Marketing",
       description: "Cultural event poster blending traditional Tunisian elements with contemporary design principles.",
       tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"],
@@ -70,7 +70,7 @@ const portfolioData = {
     },
     {
       title: "Yasmine Music Club Poster",
-      image: "/graphic_design_portfolio/portfolio/yasmine-music-club-poster.png",
+      image: "./portfolio/yasmine-music-club-poster.png",
       category: "Event Marketing",
       description: "Vibrant poster design for a music venue, emphasizing atmosphere and entertainment.",
       tools: ["Adobe Photoshop", "Adobe Illustrator"],
