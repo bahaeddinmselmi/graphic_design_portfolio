@@ -28,7 +28,7 @@ const portfolioData = {
   brandIdentity: [
     {
       title: "Black and White Science Class Logo",
-      image: "/graphic_design_portfolio/portfolio/Black and White Simple Vintage Grunge Science Class Logo.png",
+      image: "./portfolio/Black and White Simple Vintage Grunge Science Class Logo.png",
       category: "Logo Design",
       description: "A vintage-inspired educational brand identity combining scientific precision with classic aesthetics.",
       tools: ["Adobe Illustrator", "Adobe Photoshop"],
