@@ -16,8 +16,132 @@ import {
   Award,
   Calendar,
   Users,
-  Star
+  Star,
+  Image,
+  Layout,
+  Globe,
+  Coffee
 } from 'lucide-react';
+
+// Portfolio data structure
+const portfolioData = {
+  brandIdentity: [
+    {
+      title: "Black and White Science Class Logo",
+      image: "/portfolio/Black and White Simple Vintage Grunge Science Class Logo.png",
+      category: "Logo Design",
+      description: "A vintage-inspired educational brand identity combining scientific precision with classic aesthetics.",
+      tools: ["Adobe Illustrator", "Adobe Photoshop"],
+      featured: true
+    },
+    {
+      title: "Tunisia Shop Branding",
+      image: "/portfolio/Tunisiashop.png",
+      category: "Brand Identity",
+      description: "Complete brand identity for an authentic Tunisian marketplace, featuring traditional motifs with modern appeal.",
+      tools: ["Adobe Illustrator", "Adobe Photoshop"],
+      featured: true
+    },
+    {
+      title: "Modern P Monogram",
+      image: "/portfolio/P.png",
+      category: "Logo Design",
+      description: "Minimalist and sophisticated monogram design showcasing modern typography and geometric precision.",
+      tools: ["Adobe Illustrator"],
+      featured: true
+    }
+  ],
+  marketing: [
+    {
+      title: "Night Club DJ Flyer",
+      image: "/portfolio/Black Party Night Club Dj Flyer.png",
+      category: "Event Marketing",
+      description: "Dynamic and energetic flyer design for nightlife events, capturing the essence of modern club culture.",
+      tools: ["Adobe Photoshop", "Adobe Illustrator"],
+      featured: true
+    },
+    {
+      title: "Tunisian Music Festival Poster",
+      image: "/portfolio/tunisian-music-poster.png",
+      category: "Event Marketing",
+      description: "Cultural event poster blending traditional Tunisian elements with contemporary design principles.",
+      tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"],
+      featured: true
+    },
+    {
+      title: "Yasmine Music Club Poster",
+      image: "/portfolio/yasmine-music-club-poster.png",
+      category: "Event Marketing",
+      description: "Vibrant poster design for a music venue, emphasizing atmosphere and entertainment.",
+      tools: ["Adobe Photoshop", "Adobe Illustrator"],
+      featured: true
+    },
+    {
+      title: "Creative Design Exhibition",
+      image: "/portfolio/Untitled design.png",
+      category: "Event Marketing",
+      description: "Contemporary poster design for an art exhibition, featuring dynamic composition and modern typography.",
+      tools: ["Adobe InDesign", "Adobe Photoshop"],
+      featured: true
+    }
+  ],
+  foodAndBeverage: [
+    {
+      title: "Tunisia Food Campaign",
+      image: "/portfolio/Tunisa Food.png",
+      category: "Food & Beverage",
+      description: "Mouth-watering food photography and design layout showcasing Tunisian cuisine.",
+      tools: ["Adobe Photoshop", "Adobe InDesign", "Adobe Lightroom"],
+      featured: true
+    },
+    {
+      title: "Culinary Art Direction",
+      image: "/portfolio/Untitled design (1).png",
+      category: "Food & Beverage",
+      description: "Art direction and styling for a high-end restaurant menu and marketing materials.",
+      tools: ["Adobe Photoshop", "Adobe InDesign", "Adobe Lightroom"],
+      featured: true
+    }
+  ],
+  photography: [
+    {
+      title: "Camping Photo Collage",
+      image: "/portfolio/Beige Parchment Background Camping Photo Collage.png",
+      category: "Photography & Layout",
+      description: "Artistic photo collage capturing outdoor adventures with a vintage aesthetic.",
+      tools: ["Adobe Photoshop", "Adobe Lightroom"],
+      featured: true
+    }
+  ],
+  digitalDesign: [
+    {
+      title: "E-commerce Website Design",
+      image: "/portfolio/Tunisiashop.png",
+      category: "UI/UX Design",
+      description: "Modern e-commerce platform design featuring intuitive navigation and engaging visuals.",
+      tools: ["Adobe XD", "Adobe Photoshop", "Figma"],
+      featured: true
+    },
+    {
+      title: "Mobile App Interface",
+      image: "/portfolio/Untitled design.png",
+      category: "UI/UX Design",
+      description: "Clean and intuitive mobile application interface design with focus on user experience.",
+      tools: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
+      featured: true
+    }
+  ],
+  socialMedia: [
+    {
+      title: "Instagram Content Strategy",
+      image: "/portfolio/Untitled design (1).png",
+      category: "Social Media",
+      description: "Cohesive social media design package including story templates, post designs, and highlights covers.",
+      tools: ["Adobe Photoshop", "Adobe Illustrator", "Canva"],
+      featured: true
+    }
+  ]
+};
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,6 +170,9 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -54,71 +181,27 @@ function App() {
     setIsMenuOpen(false);
   };
 
-  const portfolioItems = [
-    {
-      id: 1,
-      title: "Black and White Vintage Science Class Logo",
-      category: "Branding",
-      image: "/portfolio/Black and White Simple Vintage Grunge Science Class Logo.png",
-      description: "Vintage-inspired logo design with grunge elements for educational branding."
-    },
-    {
-      id: 2,
-      title: "Tunisia Food Brand Identity",
-      category: "Food & Beverage",
-      image: "/portfolio/Tunisa Food.png",
-      description: "Complete brand identity for Tunisian food business with cultural elements."
-    },
-    {
-      id: 3,
-      title: "P Logo Design",
-      category: "Logo Design",
-      image: "/portfolio/P.png",
-      description: "Modern minimalist logo design with clean typography and geometric elements."
-    },
-    {
-      id: 4,
-      title: "Yasmine Music Club Poster",
-      category: "Event Design",
-      image: "/portfolio/yasmine-music-club-poster.png",
-      description: "Arabic typography poster design for music and arts club events."
-    },
-    {
-      id: 5,
-      title: "Camping Photo Collage",
-      category: "Photo Design",
-      image: "/portfolio/Beige Parchment Background Camping Photo Collage.png",
-      description: "Creative photo collage design with vintage parchment background for outdoor events."
-    },
-    {
-      id: 6,
-      title: "Tunisia Shop E-commerce Design",
-      category: "Digital Design",
-      image: "/portfolio/Tunisiashop.png",
-      description: "E-commerce platform design with modern UI elements and Tunisian cultural branding."
-    },
-    {
-      id: 7,
-      title: "Creative Design Project",
-      category: "Creative Design",
-      image: "/portfolio/Untitled design (1).png",
-      description: "Modern creative design showcasing innovative visual concepts and layouts."
-    },
-    {
-      id: 8,
-      title: "Tunisian Music Poster",
-      category: "Cultural Design",
-      image: "/portfolio/tunisian-music-poster.png",
-      description: "Arabic typography poster celebrating Tunisian music and cultural heritage."
-    },
-    {
-      id: 9,
-      title: "Night Club DJ Flyer",
-      category: "Event Design",
-      image: "/portfolio/Black Party Night Club Dj Flyer.png",
-      description: "Dynamic event flyer design for nightclub and DJ events with bold typography."
-    }
+  const categories = [
+    { id: 'all', label: 'All Work', icon: Layout },
+    { id: 'brandIdentity', label: 'Brand Identity', icon: Award },
+    { id: 'marketing', label: 'Marketing', icon: Users },
+    { id: 'foodAndBeverage', label: 'Food & Beverage', icon: Coffee },
+    { id: 'photography', label: 'Photography', icon: Image },
+    { id: 'digitalDesign', label: 'Digital Design', icon: Monitor },
+    { id: 'socialMedia', label: 'Social Media', icon: Globe }
   ];
+
+  // Get all portfolio items in a flat array
+  const portfolioItems = Object.entries(portfolioData).flatMap(([category, items]) =>
+    items.map(item => ({
+      ...item,
+      categoryId: category
+    }))
+  );
+
+  const filteredProjects = selectedCategory === 'all' 
+    ? portfolioItems 
+    : portfolioItems.filter(item => item.categoryId === selectedCategory);
 
   const skills = [
     { name: "Adobe Creative Suite", level: 95, icon: Palette },
@@ -317,38 +400,75 @@ function App() {
       <section id="portfolio" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">My Portfolio</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A showcase of my recent work across various design disciplines, from brand identity to digital marketing materials.
+              A curated collection of my professional work spanning brand identity, marketing materials, and digital design.
             </p>
           </div>
 
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((cat) => {
+              const IconComponent = cat.icon;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all ${
+                    selectedCategory === cat.id
+                      ? 'bg-gray-900 text-white shadow-lg'
+                      : 'bg-white text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  <IconComponent className="w-5 h-5" />
+                  <span className="font-medium">{cat.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioItems.map((item) => (
-              <div key={item.id} className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="relative overflow-hidden">
+            {filteredProjects.map((project, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                onMouseEnter={() => setHoveredProject(index)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className="relative overflow-hidden aspect-w-16 aspect-h-12">
                   <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <button className="w-full bg-white/90 backdrop-blur-sm text-gray-900 py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <button className="w-full bg-white/95 backdrop-blur-sm text-gray-900 py-2.5 px-4 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors">
                         <ExternalLink size={16} />
-                        View Project
+                        View Project Details
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
-                      {item.category}
+                      {project.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map((tool, toolIndex) => (
+                      <span
+                        key={toolIndex}
+                        className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
