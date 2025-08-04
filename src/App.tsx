@@ -78,7 +78,7 @@ const portfolioData = {
     },
     {
       title: "Creative Design Exhibition",
-      image: "/graphic_design_portfolio/portfolio/Untitled design.png",
+      image: "./portfolio/Untitled design.png",
       category: "Event Marketing",
       description: "Contemporary poster design for an art exhibition, featuring dynamic composition and modern typography.",
       tools: ["Adobe InDesign", "Adobe Photoshop"],
@@ -88,7 +88,7 @@ const portfolioData = {
   foodAndBeverage: [
     {
       title: "Tunisia Food Campaign",
-      image: "/graphic_design_portfolio/portfolio/Tunisa Food.png",
+      image: "./portfolio/Tunisa Food.png",
       category: "Food & Beverage",
       description: "Mouth-watering food photography and design layout showcasing Tunisian cuisine.",
       tools: ["Adobe Photoshop", "Adobe InDesign", "Adobe Lightroom"],
@@ -106,7 +106,7 @@ const portfolioData = {
   photography: [
     {
       title: "Camping Photo Collage",
-      image: "/graphic_design_portfolio/portfolio/Beige Parchment Background Camping Photo Collage.png",
+      image: "./portfolio/Beige Parchment Background Camping Photo Collage.png",
       category: "Photography & Layout",
       description: "Artistic photo collage capturing outdoor adventures with a vintage aesthetic.",
       tools: ["Adobe Photoshop", "Adobe Lightroom"],
